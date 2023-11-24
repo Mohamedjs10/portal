@@ -1,0 +1,71 @@
+.dark-mode {
+  background-color: rgb(37, 52, 107); /* Dark grey-blue */
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 35px;
+  /* margin: 10px; */
+  border-radius: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff; /* Light mode color */
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "☀️";
+  /* display: block; */
+  border: 1px solid #25346b;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center;
+  line-height: 50px; */
+  height: 25px;
+  width: 25px;
+  left: 5px;
+  top: 4px;
+  color: yellow;
+  transition: 0.4s;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+input:checked + .slider {
+  background-color: rgb(37, 52, 107); /* Dark mode color */
+}
+
+input:checked + .slider:before {
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(34px);
+  content: "🌙";
+  /*Crescentmoonemojifordarkmode*/
+  color: #000;
+  font-size: 13px;
+}

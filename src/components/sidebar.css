@@ -1,0 +1,26 @@
+/* Sidebar.css */
+.sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 5px;
+}
+
+.sidebar-item {
+  display: flex;
+  gap: 10px;
+  color: #afafaf !important;
+  margin-bottom: 20px !important;
+  font-weight: bold;
+  &:hover {
+    color: #25346b !important;
+  }
+  &.active-en {
+    color: #25346b !important;
+    border-right: 3px solid #25346b;
+  }
+  &.active-ar {
+    color: #25346b !important;
+    border-left: 3px solid #25346b;
+  }
+}
