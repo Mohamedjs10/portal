@@ -16,7 +16,7 @@ function App() {
   const mode = useSelector((state) => state.mode);
   useEffect(() => {
     document.body.style.backgroundColor =
-      mode == "light" ? "rgb(37, 52, 107)" : "#EEF5FF";
+      mode == "light" ? "#EEF5FF" : "rgb(37, 52, 107)";
   }, [mode]);
   return (
     <div className="container">

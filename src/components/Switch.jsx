@@ -10,6 +10,7 @@ export default function Switch() {
     <div class="theme-switch-wrapper">
       <label class="switch">
         <input
+          defaultChecked={false}
           type="checkbox"
           id="theme-switch"
           onChange={(e) => {
