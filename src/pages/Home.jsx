@@ -87,7 +87,7 @@ export default function Home() {
           <div className="body-section-a">
             <div
               style={{ width: "200px", height: "300px", flexGrow: "1" }}
-              className="card"
+              className="card my-swiper"
             >
               <MySwiper></MySwiper>
             </div>
@@ -122,7 +122,8 @@ export default function Home() {
             ))}
           </div>
           <div className="body-section-c">
-            <div className="card-column" style={{ flexGrow: "1" }}>
+            {/* <div className="card-column" style={{ flexGrow: "1" }}> */}
+            <div className="card-column" style={{ width: "30%" }}>
               <div
                 style={{
                   display: "flex",
@@ -186,7 +187,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="card-column" style={{ flexGrow: "1" }}>
+            {/* <div className="card-column" style={{ flexGrow: "1" }}> */}
+            <div className="card-column" style={{ width: "30%" }}>
               <div
                 style={{
                   display: "flex",
@@ -219,7 +221,14 @@ export default function Home() {
                   <KeyboardArrowLeftIcon sx={{ fontSize: 20 }} />
                 </div>
               </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  gap: "10px",
+                }}
+              >
                 {[
                   {
                     title: {
@@ -252,7 +261,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     style={{
-                      width: "200px",
+                      width: "150px",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
@@ -262,7 +271,7 @@ export default function Home() {
                   >
                     <FontAwesomeIcon
                       icon={faFile}
-                      style={{ fontSize: "60px", color: "#e53953" }}
+                      style={{ fontSize: "40px", color: "#e53953" }}
                     />
                     <div style={{ textAlign: "center" }}>
                       {locale == "en" ? item.title.en : item.title.ar}
@@ -271,7 +280,8 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="card-column" style={{ flexGrow: "1" }}>
+            {/* <div className="card-column" style={{ flexGrow: "1" }}> */}
+            <div className="card-column" style={{ width: "30%" }}>
               <div
                 style={{
                   display: "flex",
