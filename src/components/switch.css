@@ -32,7 +32,7 @@
 
 .slider:before {
   position: absolute;
-  content: "🌙";
+  content: "☀️";
   border: 1px solid #25346b;
   background-color: #fff; /* Dark mode color */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -62,7 +62,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   transform: translateX(34px);
-  content: "☀️";
+  content: "🌙";
   color: #000;
   font-size: 13px;
 }
