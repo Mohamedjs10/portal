@@ -27,7 +27,12 @@ import {
   faFile,
   faFileLines,
 } from "@fortawesome/free-solid-svg-icons"; // Use faGlobe instead of fa-solid fa-globe
+import { useSelector, useDispatch } from "react-redux";
+
 export default function Files() {
+  const mode = useSelector((state) => state.mode);
+  console.log(mode);
+
   const handleSearch = () => {
     // Implement your search logic here
     console.log("Searching...");
@@ -40,141 +45,275 @@ export default function Files() {
 
   //* routing
 
+  // return (
+  //   <div dir={direction}>
+  //     <div className="navbar-container">
+  //       <img src={logo} width="100px" />
+  //       <div className="navbar-sub-container">
+  //         <Switch />
+  //         <Popover />
+  //       </div>
+  //     </div>
+  //     <div className="body-container">
+  //       <div className="body-sidebar">
+  //         <Sidebar />
+  //       </div>
+  //       <div className="body-content-files">
+  //         <div
+  //           style={{
+  //             display: "flex",
+  //             justifyContent: "space-between",
+  //             alignItems: "center",
+  //             gap: "5px",
+  //             marginBottom: "30px",
+  //           }}
+  //         >
+  //           <div
+  //             style={{
+  //               display: "flex",
+  //               alignItems: "center",
+  //               gap: "5px",
+  //               color: mode === "light" ? "#25346B" : "#fff",
+  //             }}
+  //           >
+  //             <FontAwesomeIcon icon={faFileLines} />
+  //             <div style={{}}>مكتبة الملفات</div>
+  //           </div>
+  //           <div className="search-field-container">
+  //             <TextField
+  //               size="small"
+  //               variant="outlined"
+  //               placeholder={locale == "en" ? "search" : "بحث"}
+  //               InputProps={{
+  //                 endAdornment: (
+  //                   <IconButton onClick={handleSearch} edge="end">
+  //                     <SearchIcon />
+  //                   </IconButton>
+  //                 ),
+  //               }}
+  //             />
+  //           </div>
+  //         </div>
+  //         <div className="body-section">
+  //           {[
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //           ].map((item) => (
+  //             <ServiceCard item={item} />
+  //           ))}
+  //         </div>
+  //         <div
+  //           className="body-section-title"
+  //           style={{
+  //             color: mode === "light" ? "#25346B" : "#fff",
+  //           }}
+  //         >
+  //           ملفات دليل المستخدم
+  //         </div>
+  //         <div className="body-section">
+  //           {[
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //             {
+  //               title: {
+  //                 en: "user guide for how to use the files",
+  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
+  //               },
+  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+  //             },
+  //           ].map((item) => (
+  //             <FileCard item={item} />
+  //           ))}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
   return (
-    <div dir={direction}>
-      <div className="navbar-container">
-        <img src={logo} width="100px" />
-        <div className="navbar-sub-container">
-          <Switch />
-          <Popover />
+    <div className="body-content-files">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "5px",
+          marginBottom: "30px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "5px",
+            color: mode === "light" ? "#25346B" : "#fff",
+          }}
+        >
+          <FontAwesomeIcon icon={faFileLines} />
+          <div>مكتبة الملفات</div>
+        </div>
+        <div className="search-field-container">
+          <TextField
+            size="small"
+            variant="outlined"
+            placeholder={locale == "en" ? "search" : "بحث"}
+            InputProps={{
+              endAdornment: (
+                <IconButton onClick={handleSearch} edge="end">
+                  <SearchIcon />
+                </IconButton>
+              ),
+            }}
+          />
         </div>
       </div>
-      <div className="body-container">
-        <div className="body-sidebar">
-          <Sidebar />
-        </div>
-        <div className="body-content-files">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              gap: "5px",
-              marginBottom: "30px",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "5px",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faFileLines}
-                style={{ color: "#0f2941" }}
-              />
-              <div>مكتبة الملفات</div>
-            </div>
-            <div className="search-field-container">
-              <TextField
-                size="small"
-                variant="outlined"
-                placeholder={locale == "en" ? "search" : "بحث"}
-                InputProps={{
-                  endAdornment: (
-                    <IconButton onClick={handleSearch} edge="end">
-                      <SearchIcon />
-                    </IconButton>
-                  ),
-                }}
-              />
-            </div>
-          </div>
-          <div className="body-section">
-            {[
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-            ].map((item) => (
-              <ServiceCard item={item} />
-            ))}
-          </div>
-          <div className="body-section-title">ملفات دليل المستخدم</div>
-          <div className="body-section">
-            {[
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-              {
-                title: {
-                  en: "user guide for how to use the files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
-                },
-                date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-              },
-            ].map((item) => (
-              <FileCard item={item} />
-            ))}
-          </div>
-        </div>
+      <div className="body-section">
+        {[
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+        ].map((item) => (
+          <ServiceCard item={item} />
+        ))}
+      </div>
+      <div
+        className="body-section-title"
+        style={{
+          color: mode === "light" ? "#25346B" : "#fff",
+        }}
+      >
+        ملفات دليل المستخدم
+      </div>
+      <div className="body-section">
+        {[
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+          {
+            title: {
+              en: "user guide for how to use the files",
+              ar: "دليل المستخدم لنظام مشاركة الملفات",
+            },
+            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+          },
+        ].map((item) => (
+          <FileCard item={item} />
+        ))}
       </div>
     </div>
   );

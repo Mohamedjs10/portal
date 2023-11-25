@@ -11,13 +11,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
   //*
-  const [selectedItem, setSelectedItem] = useState(null);
+
   let locale = i18n.language === "en" ? "en" : "ar";
   const location = useLocation();
   const navigate = useNavigate();
 
   const handleItemClick = (item) => {
-    setSelectedItem(item);
     navigate(item.path);
   };
 
