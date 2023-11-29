@@ -37,11 +37,6 @@ export default function Home() {
   console.log(locale);
   const systems = [
     {
-      title: { en: "test", ar: "منصة سم" },
-      icon: faFontAwesome,
-      color: "#388beb",
-    },
-    {
       title: { en: "test", ar: "المساندة الفنية" },
       icon: faUser,
       color: "#23b084",
@@ -51,25 +46,11 @@ export default function Home() {
       icon: faAward,
       color: "#6258a5",
     },
-    {
-      title: { en: "test", ar: "ابداع" },
-      icon: faLightbulb,
-      color: "#fcaa44",
-    },
+
     {
       title: { en: "test", ar: "هويتنا" },
       icon: faFingerprint,
       color: "#ed7332",
-    },
-    {
-      title: { en: "test", ar: "التوظيف الداخلي" },
-      icon: faPersonWalkingLuggage,
-      color: "#99d631",
-    },
-    {
-      title: { en: "test", ar: "اداة تصنيف البيانات" },
-      icon: faChartSimple,
-      color: "#f16987",
     },
   ];
   //* routing
@@ -478,7 +459,7 @@ export default function Home() {
               }}
             >
               <img src={logo} width="25px" />
-              <p>اسرة سدايا</p>
+              <p>اسرة ديم</p>
             </div>
             <div
               style={{
@@ -511,12 +492,12 @@ export default function Home() {
                   marginBottom: "10px",
                 }}
               >
-                الف مبروك راشد الهدهود
+                اقرأ عن كيفية استخدام أحدث التقنيات ...
               </div>
               <div style={{ color: "#606060" }}>
-                نهنئ الزميل راشد بن عبد الله الهدهود من الادلرة العامة لمركز
-                البيانات والطاقة حصوله على شهادة بكالريوس هندسة الامن السيبراني
-                من من كلية ...
+                الذكاء الاصطناعي: يلعب دورًا حيويًا في تبسيط الحياة اليومية
+                ويتضمن تطبيقات مثل الروبوتات المنزلية والأجهزة القابلة
+                للارتداء​​.
               </div>
             </div>
           </div>
@@ -615,7 +596,10 @@ export default function Home() {
           </div>
         </div>
         {/* <div className="card-column" style={{ flexGrow: "1" }}> */}
-        <div className="card-column" style={{ width: "30%" }}>
+        <div
+          className="card-column"
+          style={{ width: "30%", visibility: "hidden" }}
+        >
           <div
             style={{
               display: "flex",
@@ -633,7 +617,7 @@ export default function Home() {
               }}
             >
               <img src={logo} width="25px" />
-              <p>اسرة سدايا</p>
+              <p>اسرة ديم</p>
             </div>
             <div
               style={{

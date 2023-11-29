@@ -44,7 +44,10 @@ export default function Navbar() {
       text: { en: "About", ar: "عن ديم" },
       path: "/about",
     },
-    { icon: faHouse, text: { en: "Sadaya Commitee", ar: "مجلس سدايا" } },
+    {
+      icon: faHouse,
+      text: { en: "Organizational Chart", ar: "الهيكل التنظيمي" },
+    },
     {
       icon: faHouse,
       text: { en: "Services and Systems", ar: "الخدمات والأنظمة" },
@@ -55,8 +58,7 @@ export default function Navbar() {
       text: { en: "Files Library", ar: "مكتبة الملفات" },
       path: "/files",
     },
-    { icon: faHouse, text: { en: "Home", ar: "منسوبو سدايا" } },
-    { icon: faHouse, text: { en: "Smart", ar: "ذكي" } },
+    { icon: faHouse, text: { en: "Deem Attribution", ar: "منسوب ديم" } },
     { icon: faHouse, text: { en: "Calender", ar: "التقويم" } },
   ];
 

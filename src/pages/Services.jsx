@@ -424,26 +424,26 @@ export default function Services() {
             { title: { en: "All", ar: "الكل" }, action: "#" },
             {
               title: { en: "User Guide Files", ar: "ملفات دليل المستخدم" },
-              action: "#",
+              action: "",
             },
             {
               title: { en: "Services and Rules", ar: "الأنظمة واللوائح" },
-              action: "#",
+              action: "",
             },
             {
               title: {
                 en: "Cyber Security Policies",
                 ar: "سياسات الأمن السيبراني",
               },
-              action: "#",
+              action: "",
             },
             {
               title: { en: "Offers and Discounts", ar: "العروض والخصومات" },
-              action: "#",
+              action: "https://portal.walaplus.com/login",
             },
             {
               title: { en: "Generalizations", ar: "التعاميم" },
-              action: "#",
+              action: "",
             },
           ].map((item) => {
             const color = checked === item.title.en ? "#fff" : "#0f2941";
@@ -453,6 +453,10 @@ export default function Services() {
                 variant="contained"
                 onClick={() => {
                   setChecked(item.title.en);
+                  if (item.action) {
+                    // window.location.href = item.action;
+                    window.open(item.action);
+                  }
                 }}
                 sx={{
                   display: "flex",
@@ -494,7 +498,7 @@ export default function Services() {
           {
             title: {
               en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
+              ar: "دليل المستخدم للبريد",
             },
             date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
           },
@@ -508,175 +512,7 @@ export default function Services() {
           {
             title: {
               en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-        ].map((item) => (
-          <ServiceCard item={item} />
-        ))}
-      </div>
-      <div
-        className="body-section-title"
-        style={{
-          color: mode === "light" ? "#25346B" : "#fff",
-        }}
-      >
-        منصة الأنظمة الداخلية
-      </div>
-      <div className="body-section">
-        {[
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
+              ar: "دليل المستخدم للبريد",
             },
             date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
           },
