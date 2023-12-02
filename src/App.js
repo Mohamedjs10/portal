@@ -7,6 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
 import Files from "./pages/Files.jsx";
 import Services from "./pages/Services.jsx";
 import { useSelector, useDispatch } from "react-redux";
@@ -56,6 +57,7 @@ function App() {
             </div>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/files" element={<Files />} />
               <Route path="/services" element={<Services />} />
             </Routes>

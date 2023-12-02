@@ -673,30 +673,21 @@ export default function Home() {
         <div className="body-section-d">
           {[
             {
-              image:
-                "https://upload.wikimedia.org/wikipedia/commons/6/60/SDAIA-Logo-2.png",
+              image: "https://i.postimg.cc/KjvSBy7T/sdaia.png",
               link: "https://sdaia.gov.sa/ar/default.aspx",
+              width: "100%",
             },
             {
-              image:
-                "https://upload.wikimedia.org/wikipedia/commons/6/60/SDAIA-Logo-2.png",
-              link: "https://sdaia.gov.sa/ar/default.aspx",
-            },
-            {
-              image:
-                "https://upload.wikimedia.org/wikipedia/commons/6/60/SDAIA-Logo-2.png",
-              link: "https://sdaia.gov.sa/ar/default.aspx",
-            },
-            {
-              image:
-                "https://upload.wikimedia.org/wikipedia/commons/6/60/SDAIA-Logo-2.png",
-              link: "https://sdaia.gov.sa/ar/default.aspx",
+              image: "https://i.postimg.cc/J7YmWG5C/service-now.png",
+              link: "https://www.servicenow.com/",
+              width: "100%",
             },
           ].map((item) => (
             <div
               className="card scale"
               onClick={() => {
-                window.location.href = item.link;
+                // window.location.href = item.link;
+                window.open(item.link, "_blank").focus();
               }}
               style={{
                 width: "150px",
@@ -706,7 +697,7 @@ export default function Home() {
                 alignItems: "center",
               }}
             >
-              <img src={item.image} height="100%" width="100%" />
+              <img src={item.image} width={item.width} />
             </div>
           ))}
         </div>
