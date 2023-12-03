@@ -92,3 +92,7 @@ body {
     display: none;
   }
 }
+
+.MuiPickersArrowSwitcher-root {
+  direction: ltr !important;
+}

@@ -27,7 +27,15 @@ import {
   faFilePdf,
 } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../components/Navbar";
+
+import dayjs from "dayjs";
+import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 export default function Home() {
+  const [value, setValue] = useState(dayjs("2022-04-17"));
+
   const mode = useSelector((state) => state.mode);
 
   //* localization
@@ -403,13 +411,36 @@ export default function Home() {
         >
           <MySwiper></MySwiper>
         </div>
-        <div className="card-column" style={{ width: "300px" }}>
-          <div
+        <div
+          className="card-column"
+          style={{
+            width: "300px",
+            height: "320px",
+            padding: 0,
+            margin: 0,
+            overflow: "hidden",
+          }}
+        >
+          {/* <div
             className="card"
             style={{ backgroundColor: "#25346b", color: "#fff" }}
           >
             Date
-          </div>
+          </div> */}
+          <LocalizationProvider
+            dateAdapter={AdapterDayjs}
+            style={{
+              direction: "ltr !important",
+            }}
+          >
+            <DateCalendar
+              style={{
+                direction: "ltr !important",
+              }}
+              value={dayjs(new Date())}
+              onChange={(newValue) => setValue(newValue)}
+            />
+          </LocalizationProvider>
         </div>
       </div>
       <div className="body-section-b">
@@ -680,6 +711,17 @@ export default function Home() {
             {
               image: "https://i.postimg.cc/J7YmWG5C/service-now.png",
               link: "https://www.servicenow.com/",
+              width: "100%",
+            },
+            {
+              image: "https://i.ibb.co/VCwBxzH/Untitled-design-1.png",
+              link: "https://www.tenable.com/?tns_languageOverride=true",
+              width: "100%",
+            },
+            {
+              image:
+                "https://www.beyondtrust.com/assets/svg/logo/beyondtrust.svg",
+              link: "https://www.beyondtrust.com/",
               width: "100%",
             },
           ].map((item) => (
