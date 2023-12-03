@@ -86,7 +86,7 @@ export default function MySwiper() {
               <div>
                 {locale === "en" ? item.description.en : item.description.ar}
               </div> */}
-              <img src={item.img} />
+              <img src={item.img} style={{ width: "100%", height: "100%" }} />
             </div>
           </SwiperSlide>
         ))}
