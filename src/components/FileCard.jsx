@@ -8,7 +8,12 @@ export default function FileCard({ item }) {
   let locale = i18n.language === "en" ? "en" : "ar";
 
   return (
-    <div className="file-card-container card">
+    <div
+      className="file-card-container card"
+      onClick={() => {
+        window.open(item.link, "_blank");
+      }}
+    >
       <div style={{ fontWeight: "bold", color: "#25346b" }}>
         {locale === "en" ? item.title.en : item.title.ar}
       </div>

@@ -28,7 +28,7 @@ import {
   faFileLines,
 } from "@fortawesome/free-solid-svg-icons"; // Use faGlobe instead of fa-solid fa-globe
 import { useSelector, useDispatch } from "react-redux";
-
+import sample from "../assets/files/sample.pdf";
 export default function Files() {
   const mode = useSelector((state) => state.mode);
   console.log(mode);
@@ -226,6 +226,7 @@ export default function Files() {
         </div>
       </div>
       <div className="body-section">
+        {/* mapping over files ---------------------------------------------------------------------------- */}
         {[
           {
             title: {
@@ -233,6 +234,7 @@ export default function Files() {
               ar: "دليل المستخدم لنظام مشاركة الملفات",
             },
             date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+            link: sample,
           },
           {
             title: {
@@ -240,27 +242,7 @@ export default function Files() {
               ar: "دليل المستخدم لنظام مشاركة الملفات",
             },
             date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+            link: sample,
           },
         ].map((item) => (
           <ServiceCard item={item} />
@@ -275,6 +257,7 @@ export default function Files() {
         ملفات دليل المستخدم
       </div>
       <div className="body-section">
+        {/* mapping over array ----------------------------------------------------------------------- */}
         {[
           {
             title: {
@@ -282,6 +265,7 @@ export default function Files() {
               ar: "دليل المستخدم لنظام مشاركة الملفات",
             },
             date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+            link: sample,
           },
           {
             title: {
@@ -289,27 +273,7 @@ export default function Files() {
               ar: "دليل المستخدم لنظام مشاركة الملفات",
             },
             date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-          },
-          {
-            title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
-            },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
+            link: sample,
           },
         ].map((item) => (
           <FileCard item={item} />

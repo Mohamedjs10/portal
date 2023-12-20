@@ -8,7 +8,12 @@ export default function ServiceCard({ item }) {
   let locale = i18n.language === "en" ? "en" : "ar";
 
   return (
-    <div className="service-card-container card">
+    <div
+      className="service-card-container card"
+      onClick={() => {
+        window.open(item.link, "_blank");
+      }}
+    >
       <FontAwesomeIcon icon={faGear} style={{ color: "#0f2941" }} />
 
       <div style={{ color: "#25346b" }}>
