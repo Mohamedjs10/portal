@@ -40,8 +40,11 @@ export default function OrganizationalChart() {
     <div className="body-content-files">
       <TransformWrapper>
         <TransformComponent>
-          <img src={org} width="100%" />
-          {/* <img src="https://portal.deem.sa/sites/Sp/Hirarcy/H1.PNG" width="100%" /> */}
+          {/* <img src={org} width="100%" /> */}
+          <img
+            src="https://portal.deem.sa/sites/Sp/Hirarcy/H1.PNG"
+            width="100%"
+          />
         </TransformComponent>
       </TransformWrapper>
     </div>
