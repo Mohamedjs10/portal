@@ -1,13 +1,5 @@
-import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
-import Switch from "../components/Switch";
-import Popover from "../components/Popover";
-import Sidebar from "../components/Sidebar";
-import FileCard from "../components/FileCard";
-import ServiceCard from "../components/ServiceCard";
-import Button from "@mui/material/Button";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+
 import "./files.css";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
@@ -46,7 +38,12 @@ export default function OrganizationalChart() {
 
   return (
     <div className="body-content-files">
-      <img src={org} />
+      <TransformWrapper>
+        <TransformComponent>
+          <img src={org} width="100%" />
+          {/* <img src="https://portal.deem.sa/sites/Sp/Hirarcy/H1.PNG" width="100%" /> */}
+        </TransformComponent>
+      </TransformWrapper>
     </div>
   );
 }

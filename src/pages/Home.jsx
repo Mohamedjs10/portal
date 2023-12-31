@@ -119,13 +119,54 @@ export default function Home() {
           <div
             style={{
               display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "5px",
+              }}
+            >
+              {/* <img src={logo} width="25px" /> */}
+              <img src={logo} width="25px" />
+              <p>اسرة ديم</p>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "#25346b",
+              }}
+              onClick={() => {
+                window.location.href =
+                  "https://portal.deem.sa/sites/Sp/Lists/DeemFamily/DeemFamily.aspx";
+              }}
+            >
+              المزيد
+              <KeyboardArrowLeftIcon sx={{ fontSize: 20 }} />
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
             }}
           >
-            <img src={dummy} width="100%" />
+            {/* <img src={dummy} width="100%" /> */}
+            <img
+              src="https://portal.deem.sa/sites/Sp/DeemFamilyPic/Dimg1.jpg"
+              width="100%"
+            />
           </div>
+
           {/* <div
             style={{
               display: "flex",
@@ -215,6 +256,10 @@ export default function Home() {
                 alignItems: "center",
                 color: "#25346b",
               }}
+              onClick={() => {
+                window.location.href =
+                  "https://portal.deem.sa/sites/Sp/Superguides/Forms/AllItems.aspx";
+              }}
             >
               المزيد
               <KeyboardArrowLeftIcon sx={{ fontSize: 20 }} />
@@ -231,31 +276,31 @@ export default function Home() {
             {[
               {
                 title: {
-                  en: "user guide for how to share files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
+                  ar: "ملف 1",
+                  en: "file 1",
                 },
-                url: "#",
+                url: "https://portal.deem.sa/sites/Sp/Superguides/G1.pdf",
               },
               {
                 title: {
-                  en: "user guide for how to share files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
+                  ar: "ملف 2",
+                  en: "file 2",
                 },
-                url: "#",
+                url: "https://portal.deem.sa/sites/Sp/Superguides/G2.pdf",
               },
               {
                 title: {
-                  en: "user guide for how to share files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
+                  ar: "ملف 3",
+                  en: "file 3",
                 },
-                url: "#",
+                url: "https://portal.deem.sa/sites/Sp/Superguides/G3.pdf",
               },
               {
                 title: {
-                  en: "user guide for how to share files",
-                  ar: "دليل المستخدم لنظام مشاركة الملفات",
+                  ar: "ملف 4",
+                  en: "file 4",
                 },
-                url: "#",
+                url: "https://portal.deem.sa/sites/Sp/Superguides/G4.pdf",
               },
             ].map((item) => (
               <div
@@ -266,6 +311,9 @@ export default function Home() {
                   justifyContent: "center",
                   alignItems: "center",
                   gap: "10px",
+                }}
+                onClick={() => {
+                  window.location.href = item.url;
                 }}
               >
                 <FontAwesomeIcon
