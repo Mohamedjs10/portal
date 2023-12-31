@@ -41,153 +41,9 @@ export default function Files() {
   const { t } = useTranslation();
   let locale = i18n.language === "en" ? "en" : "ar";
   const direction = locale === "en" ? "ltr" : "rtl";
-  console.log(locale);
 
   //* routing
 
-  // return (
-  //   <div dir={direction}>
-  //     <div className="navbar-container">
-  //       <img src={logo} width="100px" />
-  //       <div className="navbar-sub-container">
-  //         <Switch />
-  //         <Popover />
-  //       </div>
-  //     </div>
-  //     <div className="body-container">
-  //       <div className="body-sidebar">
-  //         <Sidebar />
-  //       </div>
-  //       <div className="body-content-files">
-  //         <div
-  //           style={{
-  //             display: "flex",
-  //             justifyContent: "space-between",
-  //             alignItems: "center",
-  //             gap: "5px",
-  //             marginBottom: "30px",
-  //           }}
-  //         >
-  //           <div
-  //             style={{
-  //               display: "flex",
-  //               alignItems: "center",
-  //               gap: "5px",
-  //               color: mode === "light" ? "#25346B" : "#fff",
-  //             }}
-  //           >
-  //             <FontAwesomeIcon icon={faFileLines} />
-  //             <div style={{}}>مكتبة الملفات</div>
-  //           </div>
-  //           <div className="search-field-container">
-  //             <TextField
-  //               size="small"
-  //               variant="outlined"
-  //               placeholder={locale == "en" ? "search" : "بحث"}
-  //               InputProps={{
-  //                 endAdornment: (
-  //                   <IconButton onClick={handleSearch} edge="end">
-  //                     <SearchIcon />
-  //                   </IconButton>
-  //                 ),
-  //               }}
-  //             />
-  //           </div>
-  //         </div>
-  //         <div className="body-section">
-  //           {[
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //           ].map((item) => (
-  //             <ServiceCard item={item} />
-  //           ))}
-  //         </div>
-  //         <div
-  //           className="body-section-title"
-  //           style={{
-  //             color: mode === "light" ? "#25346B" : "#fff",
-  //           }}
-  //         >
-  //           ملفات دليل المستخدم
-  //         </div>
-  //         <div className="body-section">
-  //           {[
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //             {
-  //               title: {
-  //                 en: "user guide for how to use the files",
-  //                 ar: "دليل المستخدم لنظام مشاركة الملفات",
-  //               },
-  //               date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-  //             },
-  //           ].map((item) => (
-  //             <FileCard item={item} />
-  //           ))}
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
   return (
     <div className="body-content-files">
       <div
@@ -230,35 +86,40 @@ export default function Files() {
         {[
           {
             title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
+              en: "file 1",
+              ar: "ملف 1",
             },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-            link: sample,
+            link: "https://portal.deem.sa/sites/Sp/ManageDocs/P1.pdf?d=w85d719f41d0a400888f5d971c09dedf3",
           },
           {
             title: {
-              en: "user guide for how to use the files",
-              ar: "دليل المستخدم لنظام مشاركة الملفات",
+              en: "file 2",
+              ar: "ملف 2",
             },
-            date: { en: "November 23, 2023", ar: "٢٣ نوفمبر ٢٠٢٣" },
-            link: sample,
+            link: "https://portal.deem.sa/sites/Sp/ManageDocs/P2.pdf?d=w09e1df26309e4f9799b463b148f5142c",
+          },
+          {
+            title: {
+              en: "file 3",
+              ar: "ملف 3",
+            },
+            link: "https://portal.deem.sa/sites/Sp/ManageDocs/P3.pdf?d=wd2dc500a47c2462fb75851134fd3e557",
           },
         ].map((item) => (
           <ServiceCard item={item} />
         ))}
       </div>
-      <div
+      {/* <div
         className="body-section-title"
         style={{
           color: mode === "light" ? "#25346B" : "#fff",
         }}
       >
         ملفات دليل المستخدم
-      </div>
+      </div> */}
       <div className="body-section">
         {/* mapping over array ----------------------------------------------------------------------- */}
-        {[
+        {/* {[
           {
             title: {
               en: "user guide for how to use the files",
@@ -277,7 +138,7 @@ export default function Files() {
           },
         ].map((item) => (
           <FileCard item={item} />
-        ))}
+        ))} */}
       </div>
     </div>
   );

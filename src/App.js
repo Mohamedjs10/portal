@@ -10,6 +10,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Files from "./pages/Files.jsx";
 import Services from "./pages/Services.jsx";
+import OrganizationalChart from "./pages/OrganizationalChart.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import logo from "./assets/logo.png";
 import logoLight from "./assets/logo-light.png";
@@ -45,6 +46,7 @@ function App() {
   useEffect(() => {
     document.body.style.backgroundColor =
       mode == "light" ? "#EEF5FF" : "rgb(37, 52, 107)";
+    // #eefff5
   }, [mode]);
   return (
     <BrowserRouter>
@@ -60,6 +62,10 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/files" element={<Files />} />
               <Route path="/services" element={<Services />} />
+              <Route
+                path="/organizational-chart"
+                element={<OrganizationalChart />}
+              />
             </Routes>
           </div>
         </div>

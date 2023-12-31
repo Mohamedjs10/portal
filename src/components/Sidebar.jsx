@@ -17,7 +17,14 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const handleItemClick = (item) => {
-    navigate(item.path);
+    if (
+      item.path ===
+      "https://portal.deem.sa/sites/Sp/Lists/SharekCalendar/calendar.aspx"
+    ) {
+      window.location.href = item.path;
+    } else {
+      navigate(item.path);
+    }
   };
 
   const sidebarItems = [
@@ -34,6 +41,7 @@ const Sidebar = () => {
     {
       icon: faHouse,
       text: { en: "Organizational Chart", ar: "الهيكل التنظيمي" },
+      path: "/organizational-chart",
     },
     {
       icon: faHouse,
@@ -46,7 +54,11 @@ const Sidebar = () => {
       path: "/files",
     },
     { icon: faHouse, text: { en: "Deem Attribution", ar: "منسوب ديم" } },
-    { icon: faHouse, text: { en: "Calender", ar: "التقويم" } },
+    {
+      icon: faHouse,
+      text: { en: "Calender", ar: "التقويم" },
+      path: "https://portal.deem.sa/sites/Sp/Lists/SharekCalendar/calendar.aspx",
+    },
   ];
   const active = locale === "en" ? "active-en" : "active-ar";
   return (

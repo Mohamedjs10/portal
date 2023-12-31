@@ -12,7 +12,7 @@ import "./home.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Box from "@mui/material/Box";
-
+import dummy from "../assets/org.jpg";
 import i18n from "../locals/i18n";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,6 +34,7 @@ import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
+import axios from "axios";
 export default function Home() {
   const [value, setValue] = useState(dayjs("2022-04-17"));
 
@@ -43,12 +44,12 @@ export default function Home() {
   const { t } = useTranslation();
   let locale = i18n.language === "en" ? "en" : "ar";
   const direction = locale === "en" ? "ltr" : "rtl";
-  console.log(locale);
   const systems = [
     {
       title: { en: "test", ar: "المساندة الفنية" },
       icon: faUser,
       color: "#23b084",
+      path: "https://www.servicenow.com/",
     },
     {
       title: { en: "test", ar: "المكتبة المعرفية" },
@@ -88,6 +89,13 @@ export default function Home() {
         </div>
         {systems?.map((item) => (
           <Button
+            onClick={() => {
+              if (item.path === "https://www.servicenow.com/") {
+                window.location.href = item.path;
+              } else {
+                navigate(item.path);
+              }
+            }}
             variant="contained"
             sx={{
               display: "flex",
@@ -109,6 +117,16 @@ export default function Home() {
         {/* <div className="card-column" style={{ flexGrow: "1" }}> */}
         <div className="card-column" style={{ width: "30%" }}>
           <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <img src={dummy} width="100%" />
+          </div>
+          {/* <div
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -138,8 +156,8 @@ export default function Home() {
               المزيد
               <KeyboardArrowLeftIcon sx={{ fontSize: 20 }} />
             </div>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             style={{
               display: "flex",
               alignItems: "flex-start",
@@ -166,7 +184,7 @@ export default function Home() {
                 للارتداء​​.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* <div className="card-column" style={{ flexGrow: "1" }}> */}
         <div className="card-column" style={{ width: "30%" }}>
@@ -366,6 +384,7 @@ export default function Home() {
               link: "https://sdaia.gov.sa/ar/default.aspx",
               width: "100%",
             },
+
             {
               image: "https://i.postimg.cc/J7YmWG5C/service-now.png",
               link: "https://www.servicenow.com/",
